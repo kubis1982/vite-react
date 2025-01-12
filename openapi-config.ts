@@ -9,6 +9,23 @@ const config: ConfigFile = {
   outputFile: './src/store/api.ts',
   exportName: 'api',
   hooks: true,
+  outputFiles: {
+    './src/store/AccessManagement.ts': {
+      filterEndpoints: [/AccessManagement/i],
+    },
+    './src/store/Warehouses.ts': {
+      filterEndpoints: [/Warehouses/i],
+    },
+    './src/store/Articles.ts': {
+      filterEndpoints:[/Articles/i],
+    },
+    './src/store/Contractors.ts': {
+      filterEndpoints: [/Contractors/i],
+    },
+    './src/store/Orders.ts': {
+      filterEndpoints: [/Orders/i],
+    },
+  },
 }
 
 export default config
